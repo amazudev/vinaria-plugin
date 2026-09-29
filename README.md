@@ -1,6 +1,6 @@
 # Dépôt du plugin Vinaria
 
-Ce dépôt contient le plugin Vinaria V0. `.claude-plugin/marketplace.json` est le catalogue Claude ; `.agents/plugins/marketplace.json` est le catalogue Codex. Le paquet commun se trouve dans `plugins/vinaria/` : deux manifestes, le serveur MCP distant, les skills `configurer` et `prospecter`, et son README. La spec dans `docs/specs/` reste hors du paquet.
+Ce dépôt contient le plugin Vinaria V0. `.claude-plugin/marketplace.json` est le catalogue Claude ; `.agents/plugins/marketplace.json` est le catalogue Codex. Le paquet commun se trouve dans `plugins/vinaria/` : deux manifestes, le serveur MCP distant, les skills `set-up` et `prospecting`, et son README. La spec dans `docs/specs/` reste hors du paquet.
 
 ## Publier une version
 

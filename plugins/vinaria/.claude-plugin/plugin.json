@@ -1,7 +1,7 @@
 {
   "name": "vinaria",
   "displayName": "Vinaria",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Aide à trouver, qualifier et enregistrer des prospects avec Vinaria, sans aucun envoi de message.",
   "author": {
     "name": "Vinaria"

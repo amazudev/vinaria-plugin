@@ -1,6 +1,6 @@
 # Vinaria
 
-Vinaria aide les clients invités à trouver des sociétés, à qualifier des prospects et à conserver les résultats dans leur propre espace. Le plugin fournit une méthode commune, sans imposer de CRM, de tableur ou de source nationale. Il ne contacte personne et n'envoie aucun message.
+Vinaria aide ses abonnés à trouver des sociétés, à qualifier des prospects et à conserver les résultats dans leur propre espace. Le plugin fournit une méthode commune, sans imposer de CRM, de tableur ou de source nationale. Il ne contacte personne et n'envoie aucun message.
 
 ## Installer et connecter
 
@@ -10,9 +10,9 @@ Dépôt : `https://github.com/amazudev/vinaria-plugin`
 - **Claude Code** : `/plugin marketplace add amazudev/vinaria-plugin`, puis `/plugin install vinaria@vinaria`.
 - **Codex** : `codex plugin marketplace add amazudev/vinaria-plugin`, puis installer Vinaria depuis le catalogue.
 
-Après l'installation, connecter le serveur Vinaria avec son compte invité : dans l'onglet Connecteurs du plugin pour Claude, ou via la connexion MCP dans Codex. L'authentification est assurée par le serveur OAuth. Ne saisir aucun secret dans la conversation. Sans compte Vinaria connecté, le plugin ne prospecte pas.
+Après l'installation, connecter le serveur Vinaria avec son compte Vinaria : dans l'onglet Connecteurs du plugin pour Claude, ou via la connexion MCP dans Codex. L'authentification est assurée par le serveur OAuth. Ne saisir aucun secret dans la conversation. Sans compte Vinaria connecté, le plugin ne prospecte pas.
 
-Pour commencer, ouvrir le dossier où conserver son contexte et demander : « configure mon espace ». Le skill prépare `entreprise.md`, `catalogue.md` et `fonctionnement.md` après validation. Un fichier `prospects.csv` n'est créé que si aucun autre registre n'est utilisé.
+Pour commencer, ouvrir le dossier où conserver son contexte et demander « configure mon espace », ou lancer `/vinaria:set-up`. Pour prospecter : `/vinaria:prospecting`, ou simplement « trouve des cavistes à Rennes ». Le skill `set-up` prépare `entreprise.md`, `catalogue.md` et `fonctionnement.md` après validation. Un fichier `prospects.csv` n'est créé que si aucun autre registre n'est utilisé.
 
 Les recherches envoient des requêtes au serveur `https://app.vinaria.io/mcp`. Le plugin ne stocke rien d'autre : les fichiers de contexte et le registre restent dans l'espace choisi par le client.
 

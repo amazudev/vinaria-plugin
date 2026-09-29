@@ -4,9 +4,9 @@ Date : 29/09/2026. Statut : validée en conversation avec Antoine (propriétaire
 
 ## But
 
-Un plugin générique, installé par chaque client invité de Vinaria (producteurs de vin,
+Un plugin générique, installé par chaque abonné de Vinaria (producteurs de vin,
 négociants…), qui l'aide à trouver des leads, à les qualifier et à les enregistrer de façon
-réutilisable. Vinaria (serveur MCP, OAuth, accès sur invitation) est la source de sociétés.
+réutilisable. Vinaria (serveur MCP, OAuth, compte payant par abonné) est la source de sociétés.
 Le plugin apporte la méthode ; chaque client apporte son contexte et ses outils.
 
 Principes : KISS, YAGNI, général. Aucun outil tiers imposé (Attio, Outlook, Excel…),
@@ -28,8 +28,8 @@ vinaria-plugin/
     .codex-plugin/plugin.json          manifeste Codex
     .mcp.json                          serveur Vinaria
     skills/
-      configurer/SKILL.md
-      prospecter/SKILL.md
+      set-up/SKILL.md
+      prospecting/SKILL.md
     README.md
   docs/specs/                          cette spec, hors paquet
   README.md                            pour le mainteneur : structure, publier une version
@@ -41,7 +41,7 @@ Interdits en V0 : hooks, agents, scripts, dossier `bin/` (bloque l'installation 
 ## Manifestes et catalogues
 
 - `name` : `vinaria` partout (identité permanente). `displayName` : `Vinaria`.
-- `version` : `0.1.0` dans les deux manifestes. Règle de publication : toute modification
+- `version` : `0.2.0` (0.1.0 publiée le 29/09/2026) dans les deux manifestes. Règle de publication : toute modification
   publiée augmente la version, sinon les clients Claude Code ne voient pas la mise à jour.
 - `author.name` : `Vinaria`. Description en français, une phrase, mentionnant « aucun envoi
   de message ».
@@ -68,7 +68,7 @@ Interdits en V0 : hooks, agents, scripts, dossier `bin/` (bloque l'installation 
   ```
   Ne rien inventer : chaque champ Codex utilisé doit être présent dans la documentation.
 
-## Espace du client (créé par `configurer`, jamais livré dans le plugin)
+## Espace du client (créé par `set-up`, jamais livré dans le plugin)
 
 ```text
 <dossier ouvert par le client>/
@@ -79,9 +79,9 @@ Interdits en V0 : hooks, agents, scripts, dossier `bin/` (bloque l'installation 
 ```
 
 Chaque fichier : rubriques fixes, une page environ au maximum, dates des informations.
-Les rubriques exactes sont définies dans le skill `configurer`.
+Les rubriques exactes sont définies dans le skill `set-up`.
 
-## Skill `configurer`
+## Skill `set-up`
 
 Déclencheur (description) : premier usage, « configure mon espace », mise à jour de son
 contexte, de son catalogue ou de ses outils.
@@ -106,12 +106,12 @@ contexte, de son catalogue ou de ses outils.
 7. Mises à jour ultérieures : proposer la modification précise, écrire après validation,
    dater.
 
-## Skill `prospecter`
+## Skill `prospecting`
 
 Déclencheur (description) : trouver des leads, prospects, clients, distributeurs, cavistes,
 importateurs… ; qualifier des comptes ; enrichir le registre.
 
-0. Lire `entreprise.md`, `catalogue.md`, `fonctionnement.md`. Absents : proposer `configurer`.
+0. Lire `entreprise.md`, `catalogue.md`, `fonctionnement.md`. Absents : proposer `set-up`.
 1. Entrées : zone et type de client ; demander ce qui manque. Nombre par défaut : 5 leads
    retenus. Qualité avant nombre ; en livrer moins et le dire plutôt que bâcler.
 2. Relire le registre du client pour ne pas reproposer un compte déjà traité (clé : SIREN
