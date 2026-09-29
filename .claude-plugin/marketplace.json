@@ -1,0 +1,16 @@
+{
+  "name": "vinaria",
+  "owner": {
+    "name": "Vinaria"
+  },
+  "plugins": [
+    {
+      "name": "vinaria",
+      "source": "./plugins/vinaria",
+      "description": "Aide à trouver, qualifier et enregistrer des prospects avec Vinaria, sans aucun envoi de message."
+    }
+  ],
+  "metadata": {
+    "description": "Méthode de prospection Vinaria pour les clients invités, sans aucun envoi de message."
+  }
+}

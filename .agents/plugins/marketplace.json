@@ -1,0 +1,20 @@
+{
+  "name": "vinaria",
+  "interface": {
+    "displayName": "Vinaria"
+  },
+  "plugins": [
+    {
+      "name": "vinaria",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vinaria"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
