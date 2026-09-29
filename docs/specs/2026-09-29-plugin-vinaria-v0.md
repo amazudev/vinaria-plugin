@@ -86,12 +86,14 @@ Les rubriques exactes sont définies dans le skill `set-up`.
 Déclencheur (description) : premier usage, « configure mon espace », mise à jour de son
 contexte, de son catalogue ou de ses outils.
 
-1. Identifier le dossier ouvert par le client. Ambigu ou absent : le lui demander.
-   Ne jamais écrire dans le dossier du plugin.
-2. Fichiers existants : les lire, ne jamais les écraser ; proposer des modifications.
-3. Accueil : une dizaine de questions courtes, posées par petits groupes. Accepter des liens
+1. Sans dossier Vinaria : expliquer le fonctionnement en deux ou trois phrases, puis une
+   seule demande d'autorisation (décision du 29/09/2026, friction minimale).
+2. Sur oui : créer `Documents/Vinaria` et les trois fichiers avec leurs rubriques, vides,
+   puis passer directement aux questions. Ne jamais écrire dans le dossier du plugin.
+3. Fichiers existants avec contenu : les lire, ne jamais les écraser ; proposer des modifications.
+4. Accueil : une dizaine de questions courtes, par petits groupes. Accepter des liens
    (site, fiche produits, tarifs) et les lire soi-même. Ne demander que ce qui manque.
-4. Rédiger les fichiers avec leurs rubriques fixes, les montrer, écrire après validation.
+   Après chaque groupe, remplir le fichier concerné et montrer un court résumé pour correction.
 5. Étapes de travail, sans outil imposé. Pour chacune, demander l'outil et l'usage :
    - trouver des sociétés : Vinaria (toujours), plus d'autres sources s'il en a ;
    - garder les prospects (registre) : CRM, tableur, autre ; sinon `prospects.csv` ;
