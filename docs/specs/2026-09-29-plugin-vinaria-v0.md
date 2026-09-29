@@ -41,7 +41,7 @@ Interdits en V0 : hooks, agents, scripts, dossier `bin/` (bloque l'installation 
 ## Manifestes et catalogues
 
 - `name` : `vinaria` partout (identité permanente). `displayName` : `Vinaria`.
-- `version` : `0.3.1` (0.1.0 publiée le 29/09/2026) dans les deux manifestes. Règle de publication : toute modification
+- `version` : `0.3.2` (0.1.0 publiée le 29/09/2026) dans les deux manifestes. Règle de publication : toute modification
   publiée augmente la version, sinon les clients Claude Code ne voient pas la mise à jour.
 - `author.name` : `Vinaria`. Description en français, une phrase, mentionnant « aucun envoi
   de message ».

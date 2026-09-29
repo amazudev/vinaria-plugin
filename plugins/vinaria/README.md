@@ -14,7 +14,7 @@ After installing, connect the Vinaria server with your Vinaria account: the plug
 
 ## First use
 
-Run `/vinaria:set-up`, or simply ask to set up your space. It offers to create a `Vinaria` folder in your Documents, one click to accept. It drafts `company.md`, `catalog.md` and `workflow.md` for your approval. A `prospects.csv` file is created only if you use no other register.
+Run `/vinaria:set-up`, or simply ask to set up your space. It explains how it works and asks once for permission to create a `Vinaria` folder in your Documents with `company.md`, `catalog.md` and `workflow.md`, then fills them from your answers. A `prospects.csv` file is created only if you use no other register.
 
 Then run `/vinaria:prospecting`, or simply ask, for example, "find wine shops in Rennes".
 
