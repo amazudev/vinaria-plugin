@@ -4,11 +4,13 @@ Vinaria aide les clients invités à trouver des sociétés, à qualifier des pr
 
 ## Installer et connecter
 
-- **Cowork** : ouvrir Personnaliser → Plugins → Ajouter une marketplace, ajouter la source de ce dépôt, puis installer Vinaria.
-- **Claude Code** : ajouter la marketplace de ce dépôt avec la commande `/plugin marketplace add`, puis installer `vinaria` depuis cette marketplace.
-- **Codex** : ajouter la marketplace de ce dépôt avec `codex plugin marketplace add`, puis installer Vinaria depuis le catalogue.
+Dépôt : `https://github.com/amazudev/vinaria-plugin`
 
-Après l'installation, connecter le serveur Vinaria avec son compte invité : dans l'onglet Connecteurs du plugin pour Claude, ou via la connexion MCP dans Codex. L'authentification est assurée par le serveur OAuth. Ne saisir aucun secret dans la conversation.
+- **Cowork** : ouvrir Personnaliser → Plugins → Ajouter une marketplace, coller `amazudev/vinaria-plugin`, puis installer Vinaria.
+- **Claude Code** : `/plugin marketplace add amazudev/vinaria-plugin`, puis `/plugin install vinaria@vinaria`.
+- **Codex** : `codex plugin marketplace add amazudev/vinaria-plugin`, puis installer Vinaria depuis le catalogue.
+
+Après l'installation, connecter le serveur Vinaria avec son compte invité : dans l'onglet Connecteurs du plugin pour Claude, ou via la connexion MCP dans Codex. L'authentification est assurée par le serveur OAuth. Ne saisir aucun secret dans la conversation. Sans compte Vinaria connecté, le plugin ne prospecte pas.
 
 Pour commencer, ouvrir le dossier où conserver son contexte et demander : « configure mon espace ». Le skill prépare `entreprise.md`, `catalogue.md` et `fonctionnement.md` après validation. Un fichier `prospects.csv` n'est créé que si aucun autre registre n'est utilisé.
 

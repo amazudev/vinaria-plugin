@@ -117,6 +117,8 @@ importateurs… ; qualifier des comptes ; enrichir le registre.
 2. Relire le registre du client pour ne pas reproposer un compte déjà traité (clé : SIREN
    ou identifiant national, puis domaine, puis nom et ville).
 3. Chercher avec Vinaria (`rechercher_societes`, puis `fiche_societe` sur les candidats).
+   Vinaria est obligatoire : non connecté ou en échec, ne pas prospecter avec d'autres
+   sources, expliquer comment le connecter et s'arrêter.
    Respecter les limites que Vinaria indique (lieu = siège, métiers et clientèles = indices).
 4. Vérifier chaque candidat sérieux avec les sources du client ou le web public adapté au
    pays : société active, procédure en cours, rachat, appartenance à un réseau ou une
