@@ -1,18 +1,23 @@
 {
   "name": "vinaria",
-  "version": "0.2.0",
-  "description": "Aide à trouver, qualifier et enregistrer des prospects avec Vinaria, sans aucun envoi de message.",
+  "version": "0.3.0",
+  "description": "Find, qualify and record prospects with Vinaria. Never sends a message.",
   "author": {
     "name": "Vinaria"
   },
   "interface": {
     "displayName": "Vinaria",
-    "shortDescription": "Prospection avec Vinaria, sans aucun envoi de message.",
-    "longDescription": "Trouver, qualifier et enregistrer des prospects dans l'espace du client avec Vinaria, sans aucun envoi de message.",
+    "shortDescription": "Prospecting with Vinaria. Never sends a message.",
+    "longDescription": "Find, qualify and record prospects in the subscriber's own folder with Vinaria. Answers in the user's language. Never sends a message.",
     "developerName": "Vinaria",
     "category": "Productivity",
-    "capabilities": ["Read", "Write"],
-    "defaultPrompt": ["Configure mon espace Vinaria."]
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Set up my Vinaria space."
+    ]
   },
   "skills": "./skills/",
   "mcpServers": "./.mcp.json"

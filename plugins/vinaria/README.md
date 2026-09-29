@@ -1,19 +1,27 @@
 # Vinaria
 
-Vinaria aide ses abonnés à trouver des sociétés, à qualifier des prospects et à conserver les résultats dans leur propre espace. Le plugin fournit une méthode commune, sans imposer de CRM, de tableur ou de source nationale. Il ne contacte personne et n'envoie aucun message.
+Vinaria helps its subscribers find companies, qualify prospects and keep the results in their own space. The plugin provides a shared method without imposing a CRM, a spreadsheet or a national data source. It never contacts anyone and never sends a message. It answers in the user's language.
 
-## Installer et connecter
+## Install and connect
 
-Dépôt : `https://github.com/amazudev/vinaria-plugin`
+Repository: `https://github.com/amazudev/vinaria-plugin`
 
-- **Cowork** : ouvrir Personnaliser → Plugins → Ajouter une marketplace, coller `amazudev/vinaria-plugin`, puis installer Vinaria.
-- **Claude Code** : `/plugin marketplace add amazudev/vinaria-plugin`, puis `/plugin install vinaria@vinaria`.
-- **Codex** : `codex plugin marketplace add amazudev/vinaria-plugin`, puis installer Vinaria depuis le catalogue.
+- **Cowork**: Customize → Plugins → Add marketplace, paste `amazudev/vinaria-plugin`, then install Vinaria.
+- **Claude Code**: `/plugin marketplace add amazudev/vinaria-plugin`, then `/plugin install vinaria@vinaria`.
+- **Codex**: `codex plugin marketplace add amazudev/vinaria-plugin`, then install Vinaria from the catalog.
 
-Après l'installation, connecter le serveur Vinaria avec son compte Vinaria : dans l'onglet Connecteurs du plugin pour Claude, ou via la connexion MCP dans Codex. L'authentification est assurée par le serveur OAuth. Ne saisir aucun secret dans la conversation. Sans compte Vinaria connecté, le plugin ne prospecte pas.
+After installing, connect the Vinaria server with your Vinaria account: the plugin's Connectors tab in Claude, or the MCP connection in Codex. Authentication goes through the server's OAuth. Never type a secret in the conversation. Without a connected Vinaria account, the plugin does not prospect.
 
-Pour commencer, ouvrir le dossier où conserver son contexte et demander « configure mon espace », ou lancer `/vinaria:set-up`. Pour prospecter : `/vinaria:prospecting`, ou simplement « trouve des cavistes à Rennes ». Le skill `set-up` prépare `entreprise.md`, `catalogue.md` et `fonctionnement.md` après validation. Un fichier `prospects.csv` n'est créé que si aucun autre registre n'est utilisé.
+## First use
 
-Les recherches envoient des requêtes au serveur `https://app.vinaria.io/mcp`. Le plugin ne stocke rien d'autre : les fichiers de contexte et le registre restent dans l'espace choisi par le client.
+Open the folder where you want to keep your context and run `/vinaria:set-up`, or simply ask to set up your space. It drafts `company.md`, `catalog.md` and `workflow.md` for your approval. A `prospects.csv` file is created only if you use no other register.
 
-Les mises à jour du plugin viennent de sa source. Dans Claude, utiliser « Vérifier les mises à jour » ou la synchronisation automatique. Dans Claude Code, utiliser `claude plugin update vinaria` ou la mise à jour automatique si elle est activée pour ce catalogue. Dans Codex, mettre à jour depuis le catalogue, puis ouvrir une nouvelle session. Une mise à jour ne modifie jamais les fichiers du client.
+Then run `/vinaria:prospecting`, or simply ask, for example, "find wine shops in Rennes".
+
+## Data
+
+Searches send requests to `https://app.vinaria.io/mcp`. The plugin stores nothing else: your context files and register stay in the folder you chose.
+
+## Updates
+
+Updates come from this repository. In Claude, use "Check for updates" or automatic sync. In Claude Code, run `claude plugin update vinaria`, or rely on auto-update if enabled for this marketplace. In Codex, update from the catalog, then open a new session. An update never changes your files.

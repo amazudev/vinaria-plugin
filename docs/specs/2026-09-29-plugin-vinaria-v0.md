@@ -41,7 +41,7 @@ Interdits en V0 : hooks, agents, scripts, dossier `bin/` (bloque l'installation 
 ## Manifestes et catalogues
 
 - `name` : `vinaria` partout (identité permanente). `displayName` : `Vinaria`.
-- `version` : `0.2.0` (0.1.0 publiée le 29/09/2026) dans les deux manifestes. Règle de publication : toute modification
+- `version` : `0.3.0` (0.1.0 publiée le 29/09/2026) dans les deux manifestes. Règle de publication : toute modification
   publiée augmente la version, sinon les clients Claude Code ne voient pas la mise à jour.
 - `author.name` : `Vinaria`. Description en français, une phrase, mentionnant « aucun envoi
   de message ».
@@ -72,9 +72,9 @@ Interdits en V0 : hooks, agents, scripts, dossier `bin/` (bloque l'installation 
 
 ```text
 <dossier ouvert par le client>/
-  entreprise.md       qui il est, ce qu'il vend, à qui, où ; clients idéaux ; ce qu'il exclut
-  catalogue.md        produits, appellations, formats, prix, distinctions
-  fonctionnement.md   pour chaque étape, l'outil utilisé et comment ; ses sources de vérification
+  company.md       qui il est, ce qu'il vend, à qui, où ; clients idéaux ; ce qu'il exclut
+  catalog.md        produits, appellations, formats, prix, distinctions
+  workflow.md   pour chaque étape, l'outil utilisé et comment ; ses sources de vérification
   prospects.csv       seulement s'il n'a pas d'autre registre
 ```
 
@@ -99,7 +99,7 @@ contexte, de son catalogue ou de ses outils.
    - trouver le décideur : navigateur, réseau social, rien ;
    - étapes propres au client (par ex. vérifier s'il a déjà échangé avec le compte).
    Tester chaque outil déclaré par un vrai appel de lecture. Un outil qui échoue est signalé.
-   Consigner le tout dans `fonctionnement.md`.
+   Consigner le tout dans `workflow.md`.
 6. Vérifier Vinaria par un appel de lecture. Non connecté : expliquer comment le connecter
    (onglet Connecteurs du plugin dans Claude, connexion MCP dans Codex), sans jamais demander
    de mot de passe ni de jeton dans la conversation.
@@ -111,7 +111,7 @@ contexte, de son catalogue ou de ses outils.
 Déclencheur (description) : trouver des leads, prospects, clients, distributeurs, cavistes,
 importateurs… ; qualifier des comptes ; enrichir le registre.
 
-0. Lire `entreprise.md`, `catalogue.md`, `fonctionnement.md`. Absents : proposer `set-up`.
+0. Lire `company.md`, `catalog.md`, `workflow.md`. Absents : proposer `set-up`.
 1. Entrées : zone et type de client ; demander ce qui manque. Nombre par défaut : 5 leads
    retenus. Qualité avant nombre ; en livrer moins et le dire plutôt que bâcler.
 2. Relire le registre du client pour ne pas reproposer un compte déjà traité (clé : SIREN
@@ -123,7 +123,7 @@ importateurs… ; qualifier des comptes ; enrichir le registre.
 4. Vérifier chaque candidat sérieux avec les sources du client ou le web public adapté au
    pays : société active, procédure en cours, rachat, appartenance à un réseau ou une
    centrale d'achat, catalogue actuel, décideur publié.
-5. Trier selon `entreprise.md`. Test : écrire une phrase « voici pourquoi ce compte a une
+5. Trier selon `company.md`. Test : écrire une phrase « voici pourquoi ce compte a une
    place pour nos produits ». Si elle sonne creux, le compte n'est pas retenu.
    Priorité haute, moyenne ou basse, avec la raison.
 6. Enregistrer dans le registre du client, retenus et écartés, avec la fiche standard.
@@ -132,15 +132,20 @@ importateurs… ; qualifier des comptes ; enrichir le registre.
 8. Enrichissement : quand le client corrige, conteste un tri ou annonce une nouveauté,
    proposer la modification du bon fichier ; écrire après validation, daté.
 
-Fiche standard (colonnes de `prospects.csv`, et champs à reporter dans tout autre registre) :
-`date_ajout;societe;siren;ville;type;statut;priorite;pourquoi;contact;email;telephone;site;source;notes`
-(en-tête exact, sans espace).
-- `siren` : SIREN, ou identifiant national équivalent hors de France.
-- `statut` : retenu, écarté, contacté, en discussion, client.
-- `source` : outil, filtre et date de la trouvaille.
-- `notes` : vérifications faites, avec dates.
-- CSV : séparateur `;`, UTF-8 avec BOM (lisible dans Excel français), une ligne d'en-tête.
-  Colonnes ajoutées par le client : conservées et respectées.
+Fiche standard (colonnes de `prospects.csv`, et champs à reporter dans tout autre registre),
+14 champs dans cet ordre : date d'ajout, société, identifiant (SIREN en France ou équivalent
+national), ville, type, statut (retenu, écarté, contacté, en discussion, client), priorité,
+pourquoi, contact, email, téléphone, site, source (outil, filtre, date), notes (vérifications
+datées).
+- Noms de colonnes et valeurs dans la langue de l'utilisateur ; un registre existant garde
+  son en-tête tel quel.
+- CSV : UTF-8 avec BOM, une ligne d'en-tête ; séparateur `;` si la langue de l'utilisateur
+  utilise la virgule décimale (français, allemand, espagnol…), sinon `,`.
+  Colonnes ajoutées par l'utilisateur : conservées et respectées.
+
+Langues (décision du 29/09/2026) : instructions des skills, noms de fichiers et README en
+anglais ; tout ce qui est écrit pour l'utilisateur (contenu des fichiers, rubriques, colonnes,
+valeurs, réponses) dans sa langue.
 
 ## Règles communes (présentes dans les deux skills, courtes)
 
@@ -154,11 +159,11 @@ Fiche standard (colonnes de `prospects.csv`, et champs à reporter dans tout aut
 
 ## Style des textes
 
-Français clair, phrases courtes, pas de tiret cadratin (—). Chaque SKILL.md reste court
+Anglais clair, phrases courtes, pas de tiret cadratin (—). Chaque SKILL.md reste court
 (viser moins de 150 lignes). Frontmatter : `name` égal au nom du dossier, `description`
 écrite comme les situations où le client se trouve.
 
-## README du plugin (`plugins/vinaria/README.md`, français, au moins 40 mots)
+## README du plugin (`plugins/vinaria/README.md`, anglais, au moins 40 mots)
 
 Ce que fait le plugin ; installation (Cowork : Personnaliser → Plugins → Ajouter une
 marketplace ; Claude Code ; Codex) ; connexion de Vinaria ; premier usage (« configure mon

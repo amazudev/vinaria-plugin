@@ -7,10 +7,10 @@
     {
       "name": "vinaria",
       "source": "./plugins/vinaria",
-      "description": "Aide à trouver, qualifier et enregistrer des prospects avec Vinaria, sans aucun envoi de message."
+      "description": "Find, qualify and record prospects with Vinaria. Never sends a message."
     }
   ],
   "metadata": {
-    "description": "Méthode de prospection Vinaria pour les abonnés, sans aucun envoi de message."
+    "description": "Vinaria prospecting method for subscribers. Never sends a message."
   }
 }

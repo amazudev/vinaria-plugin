@@ -1,7 +1,7 @@
-# Dépôt du plugin Vinaria
+# Vinaria plugin repository
 
-Ce dépôt contient le plugin Vinaria V0. `.claude-plugin/marketplace.json` est le catalogue Claude ; `.agents/plugins/marketplace.json` est le catalogue Codex. Le paquet commun se trouve dans `plugins/vinaria/` : deux manifestes, le serveur MCP distant, les skills `set-up` et `prospecting`, et son README. La spec dans `docs/specs/` reste hors du paquet.
+This repository holds the Vinaria plugin. `.claude-plugin/marketplace.json` is the Claude catalog; `.agents/plugins/marketplace.json` is the Codex catalog. The package lives in `plugins/vinaria/`: two manifests, the remote MCP server, the `set-up` and `prospecting` skills, and its README. The spec in `docs/specs/` is not part of the package.
 
-## Publier une version
+## Publish a version
 
-Modifier le paquet dans ce dépôt, puis augmenter `version` dans les deux manifestes avant de pousser la nouvelle version vers la source du catalogue. Chaque modification publiée exige une nouvelle version, sinon Claude Code peut ne pas la détecter. Claude et Cowork peuvent vérifier les mises à jour depuis la source ou se synchroniser automatiquement. Les fichiers créés dans l'espace d'un client ne font pas partie du paquet et ne sont pas modifiés par une mise à jour.
+Change the package, then bump `version` in both manifests before pushing. Every published change needs a new version, otherwise Claude Code may not detect it. Claude and Cowork can check for updates from the source or sync automatically. Files created in a subscriber's folder are not part of the package and are never changed by an update.
